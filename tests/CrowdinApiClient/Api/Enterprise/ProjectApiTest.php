@@ -68,6 +68,8 @@ class ProjectApiTest extends AbstractTestApi
             'vendorId' => 52760,
             'mtEngineId' => 2,
             'description' => 'Vault of all terms and their explanation',
+            'defaultTmId' => 10,
+            'defaultGlossaryId' => 20,
         ];
 
         $this->mockRequest([
@@ -102,6 +104,8 @@ class ProjectApiTest extends AbstractTestApi
                       "managerLanguageCompleted": "false"
                     },
                     "hasCrowdsourcing": false,
+                    "defaultTmId": 10,
+                    "defaultGlossaryId": 20,
                     "createdAt": "2019-09-20T11:34:40+00:00",
                     "updatedAt": "2019-09-20T11:34:40+00:00"
                   }
@@ -133,6 +137,8 @@ class ProjectApiTest extends AbstractTestApi
                       "externalType": "proofread",
                       "workflowId": 3,
                       "hasCrowdsourcing": false,
+                      "defaultTmId": 10,
+                      "defaultGlossaryId": 20,
                       "createdAt": "2019-09-20T11:34:40+00:00",
                       "updatedAt": "2019-09-20T11:34:40+00:00"
                     }
@@ -172,6 +178,8 @@ class ProjectApiTest extends AbstractTestApi
                         "managerNewStrings": "false",
                         "managerLanguageCompleted": "false"
                       },
+                      "defaultTmId": 10,
+                      "defaultGlossaryId": 20,
                       "createdAt": "2019-09-20T11:34:40+00:00",
                       "updatedAt": "2019-09-20T11:34:40+00:00"
                     }
@@ -255,7 +263,9 @@ class ProjectApiTest extends AbstractTestApi
                         "translatorNewStrings": "false",
                         "managerNewStrings": "false",
                         "managerLanguageCompleted": "false"
-                      }
+                      },
+                      "defaultTmId": 10,
+                      "defaultGlossaryId": 20
                     }
         }');
 
@@ -334,7 +344,9 @@ class ProjectApiTest extends AbstractTestApi
                         "translatorNewStrings": "false",
                         "managerNewStrings": "false",
                         "managerLanguageCompleted": "false"
-                      }
+                      },
+                      "defaultTmId": 10,
+                      "defaultGlossaryId": 20
                     }
         }');
 

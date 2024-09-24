@@ -99,6 +99,8 @@ class ProjectApiTest extends AbstractTestApi
                     'ftl' => false,
                     'android' => true,
                 ],
+            'defaultTmId' => 10,
+            'defaultGlossaryId' => 20,
         ];
 
         $this->mockRequest([
@@ -179,6 +181,8 @@ class ProjectApiTest extends AbstractTestApi
                       "ftl": "false",
                       "android": "true"
                     },
+                    "defaultTmId": 10,
+                    "defaultGlossaryId": 20,
                     "createdAt": "2019-09-20T11:34:40+00:00",
                     "updatedAt": "2019-09-20T11:34:40+00:00"
                   }
@@ -268,6 +272,8 @@ class ProjectApiTest extends AbstractTestApi
                               "ftl": "false",
                               "android": "true"
                             },
+                            "defaultTmId": 10,
+                            "defaultGlossaryId": 20,
                             "createdAt": "2019-09-20T11:34:40+00:00",
                             "updatedAt": "2019-09-20T11:34:40+00:00"
                     }
@@ -352,6 +358,8 @@ class ProjectApiTest extends AbstractTestApi
                               "ftl": "false",
                               "android": "true"
                             },
+                            "defaultTmId": 10,
+                            "defaultGlossaryId": 20,
                             "createdAt": "2019-09-20T11:34:40+00:00",
                             "updatedAt": "2019-09-20T11:34:40+00:00"
                     }
