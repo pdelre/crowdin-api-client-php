@@ -247,6 +247,11 @@ class Project extends BaseModel
      */
     protected $defaultTmId;
 
+    /**
+     * @var ?int
+     */
+    protected $defaultGlossaryId;
+
     public function __construct(array $data = [])
     {
         parent::__construct($data);
@@ -299,6 +304,7 @@ class Project extends BaseModel
         $this->saveMetaInfoInSource = (bool)$this->getDataProperty('saveMetaInfoInSource');
         $this->notificationSettings = (array)$this->getDataProperty('notificationSettings');
         $this->defaultTmId = (int)$this->getDataProperty('defaultTmId');
+        $this->defaultGlossaryId = (int)$this->getDataProperty('defaultGlossaryId');
     }
 
     /**
@@ -1055,5 +1061,21 @@ class Project extends BaseModel
     public function setDefaultTmId(int $defaultTmId): void
     {
         $this->defaultTmId = $defaultTmId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDefaultGlossaryId(): int
+    {
+        return $this->defaultGlossaryId;
+    }
+
+    /**
+     * @param int $defaultGlossaryId
+     */
+    public function setDefaultGlossaryId(int $defaultGlossaryId): void
+    {
+        $this->defaultGlossaryId = $defaultGlossaryId;
     }
 }
