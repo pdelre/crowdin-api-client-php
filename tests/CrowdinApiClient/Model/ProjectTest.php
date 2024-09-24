@@ -145,6 +145,7 @@ class ProjectTest extends TestCase
         ],
         'joinPolicy' => null,
         'visibility' => null,
+        'defaultTmId' => 10,
     ];
 
     public function testLoadData()
@@ -218,5 +219,6 @@ class ProjectTest extends TestCase
         $this->assertEquals($this->data['normalizePlaceholder'], $this->project->isNormalizePlaceholder());
         $this->assertEquals($this->data['saveMetaInfoInSource'], $this->project->isSaveMetaInfoInSource());
         $this->assertEquals($this->data['notificationSettings'], $this->project->getNotificationSettings());
+        $this->assertEquals($this->data['defaultTmId'], $this->project->getDefaultTmId());
     }
 }

@@ -242,6 +242,11 @@ class Project extends BaseModel
      */
     protected $notificationSettings = [];
 
+    /**
+     * @var ?int
+     */
+    protected $defaultTmId;
+
     public function __construct(array $data = [])
     {
         parent::__construct($data);
@@ -293,6 +298,7 @@ class Project extends BaseModel
         $this->normalizePlaceholder = (bool)$this->getDataProperty('normalizePlaceholder');
         $this->saveMetaInfoInSource = (bool)$this->getDataProperty('saveMetaInfoInSource');
         $this->notificationSettings = (array)$this->getDataProperty('notificationSettings');
+        $this->defaultTmId = (int)$this->getDataProperty('defaultTmId');
     }
 
     /**
@@ -1033,5 +1039,21 @@ class Project extends BaseModel
     public function setNotificationSettings(array $notificationSettings): void
     {
         $this->notificationSettings = $notificationSettings;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDefaultTmId(): int
+    {
+        return $this->defaultTmId;
+    }
+
+    /**
+     * @param int $defaultTmId
+     */
+    public function setDefaultTmId(int $defaultTmId): void
+    {
+        $this->defaultTmId = $defaultTmId;
     }
 }
